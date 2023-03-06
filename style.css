@@ -7,3 +7,63 @@ body {
   background-color: black;
   color: white;
 }
+
+#container {
+  margin-top: 100px;
+  margin-inline: auto;
+  width: 80%;
+  max-width: 400px;
+  text-align: center;
+}
+
+h1 {
+  margin-top: 40px;
+  margin-bottom: 10px;
+  opacity: 0.9;
+}
+
+p {
+  margin-bottom: 40px;
+  opacity: 0.7;
+}
+
+input {
+  margin-bottom: 20px;
+  padding: 20px;
+  font-size: 20px;
+  border-radius: 10px;
+  width: 100%;
+}
+
+button {
+  background-color: #0075ff7a;
+  border:none;
+  color: white;
+  transition: filter .2s;
+  padding: 20px;
+  font-size: 20px;
+  border-radius: 10px;
+  width: 100%;
+  margin: 0 20px;
+}
+
+button:hover {
+  cursor: pointer;
+  filter: brightness(1.1)
+}
+
+#resposta {
+  background-color: transparent;
+  text-align: center;
+  margin-top: 30px;
+  font-size: 20px;
+
+  transition: opacity .7s;
+}
+
+#resposta div {
+  font-size: 16px;
+  margin-bottom: 10px;
+  font-weight: 300;
+  opacity: 0.9;
+}
