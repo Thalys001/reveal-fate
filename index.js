@@ -25,7 +25,7 @@ const respostas = [
 
 // clicar em fazer pergunta
 function fazerPergunta() {
-  if (inputPergunta.value == "") {
+  if (inputPergunta.value.trim() === "") {
     alert("Digite sua pergunta");
     return;
   }
@@ -45,6 +45,6 @@ function fazerPergunta() {
   // sumir a resposta depois de 3 segundos
   setTimeout(function () {
     elementoResposta.style.opacity = 0;
-    buttonPerguntar.removeAttribute("disabled")
-  }, 3000)
+    buttonPerguntar.removeAttribute("disabled");
+  }, 3000);
 }
