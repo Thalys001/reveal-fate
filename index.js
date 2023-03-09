@@ -21,10 +21,11 @@ const respostas = [
   "Sim.",
   "Concentre-se e pergunte novamente.",
   "Sinais apontam que sim.",
+  "Não",
 ];
 
 // clicar em fazer pergunta
-function fazerPergunta() {
+const fazerPergunta = () => {
   if (inputPergunta.value.trim() === "") {
     alert("Digite sua pergunta");
     return;
@@ -32,7 +33,7 @@ function fazerPergunta() {
 
   buttonPerguntar.setAttribute("disabled", true);
 
-  const pergunta = "<div>" + inputPergunta.value + "</div>";
+  const pergunta = `<div>${inputPergunta.value}</div>`;
 
   // gerar numero aletorio
   const totalRespostas = respostas.length;
@@ -43,8 +44,10 @@ function fazerPergunta() {
   elementoResposta.style.opacity = 1;
 
   // sumir a resposta depois de 3 segundos
-  setTimeout(function () {
+  setTimeout(() => {
     elementoResposta.style.opacity = 0;
     buttonPerguntar.removeAttribute("disabled");
   }, 3000);
-}
+};
+
+buttonPerguntar.addEventListener("click", fazerPergunta);
